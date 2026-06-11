@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPT UI/UX Collaboration Designer"
+  short_description: "Brainstorm, critique, and converge UI/UX with GPT images"
+  default_prompt: "Use $gpt-image-ux-partner to run a scope-calibrated UI/UX ideation loop, then use the chosen image as a brand guide for an asset plan, extracts, and missing on-brand assets."
