@@ -10,9 +10,13 @@ It turns GPT image generation into a practical UI/UX collaborator: divergent des
 
 Example scenario: improve a product team's UI review workflow so vague AI suggestions become implementation-ready handoffs.
 
-| Before: generic AI dashboard | After: review queue to build brief |
-| --- | --- |
-| ![Before: generic AI dashboard](assets/examples/design-review-inbox/before-generic-ai-dashboard.svg) | ![After: review queue to build brief](assets/examples/design-review-inbox/after-review-queue.svg) |
+### Before: generic AI dashboard
+
+![Before: generic AI dashboard](assets/examples/design-review-inbox/before-generic-ai-dashboard.svg)
+
+### After: review queue to build brief
+
+![After: review queue to build brief](assets/examples/design-review-inbox/after-review-queue.svg)
 
 What changed: the center of the product moved from a vague assistant panel to a concrete issue queue. Evidence sits beside the decision, there is one primary action, and the output is a build brief a frontend agent can implement.
 
