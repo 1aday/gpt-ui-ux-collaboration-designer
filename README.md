@@ -4,6 +4,8 @@ This repo packages the Codex skill `gpt-image-ux-partner`.
 
 It turns GPT image generation into a practical UI/UX collaborator: divergent design boards, critique/redlines, failure scouting, convergence rounds, and implementation-ready design or asset briefs.
 
+![GPT UI/UX Collaboration Designer featured image](assets/gpt-ui-ux-collaboration-designer-featured.png)
+
 ## Install With Codex
 
 In Codex, point at this repo and say:
@@ -65,9 +67,33 @@ Use $gpt-image-ux-partner to turn the selected mockup into an asset plan: direct
 - Treats image output as directional inspiration, not literal implementation truth.
 - Converts the selected direction into build briefs, component maps, responsive notes, or asset plans.
 
+## How It Works
+
+```mermaid
+flowchart LR
+  A[User asks for UI/UX help] --> B{Collaboration cadence}
+  B --> C[Step-by-step feedback]
+  B --> D[Autonomous sprint]
+  B --> E[Final implementation gate]
+  C --> F[Frame scope and constraints]
+  D --> F
+  E --> F
+  F --> G[3 divergent rounds]
+  G --> H[Failure scouting and avoid-list]
+  H --> I[Synthesize one direction]
+  I --> J[3 convergent rounds]
+  J --> K[Chosen design brief]
+  K --> L{Ready to build?}
+  L --> M[Implementation plan]
+  L --> N[Asset plan]
+  L --> O[Component and state map]
+```
+
 ## Repository Layout
 
 ```text
+assets/
+  gpt-ui-ux-collaboration-designer-featured.png
 skills/gpt-image-ux-partner/
   SKILL.md
   agents/openai.yaml
