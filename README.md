@@ -4,6 +4,8 @@ This repo packages the Codex skill `gpt-image-ux-partner`.
 
 It turns GPT image generation into a practical UI/UX collaborator: divergent design boards, critique/redlines, failure scouting, convergence rounds, and implementation-ready design or asset briefs.
 
+![GPT UI/UX Collaboration Designer featured image](assets/gpt-ui-ux-collaboration-designer-featured.svg)
+
 ## Simple Proof
 
 Example scenario: improve a product team's UI review workflow so vague AI suggestions become implementation-ready handoffs.
@@ -103,7 +105,7 @@ Frame the problem, generate different interaction models, mark what works and fa
 
 ```text
 assets/
-  gpt-ui-ux-collaboration-designer-featured.png
+  gpt-ui-ux-collaboration-designer-featured.svg
   examples/
 examples/
   design-review-inbox/
