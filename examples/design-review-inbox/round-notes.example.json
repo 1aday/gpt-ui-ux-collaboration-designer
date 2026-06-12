@@ -1,0 +1,88 @@
+{
+  "project": "Design Review Inbox",
+  "skill": "gpt-image-ux-partner",
+  "created_at": "2026-06-11T00:00:00+00:00",
+  "updated_at": "2026-06-11T00:00:00+00:00",
+  "collaboration_cadence": "final_implementation_gate",
+  "scope": "specific_feature_ux",
+  "loop_depth": "quick",
+  "loop_depth_reason": "The goal was a simple README example, not a full six-round exploration.",
+  "user_job": "Turn messy UI feedback into prioritized implementation handoffs.",
+  "rounds": [
+    {
+      "round": 1,
+      "phase": "divergent",
+      "created_at": "2026-06-11T00:00:00+00:00",
+      "prompt": "Compare generic AI dashboard, review queue, and build-brief handoff patterns.",
+      "images": [
+        "../../assets/examples/design-review-inbox/before-generic-ai-dashboard.svg"
+      ],
+      "liked": [
+        "queue as the primary object",
+        "evidence chips beside each issue",
+        "build brief as the output artifact"
+      ],
+      "patterns": [
+        "prioritized queue",
+        "selected issue detail panel",
+        "handoff panel"
+      ],
+      "failure_signals": [
+        "assistant panel hides the work",
+        "metrics do not change the next action",
+        "duplicated CTAs"
+      ],
+      "avoid_added": [
+        "generic AI assistant as the whole product",
+        "metrics that do not change the next action",
+        "duplicate CTAs"
+      ],
+      "decision": "Converge on review queue to build brief.",
+      "next_prompt_change": "Make the UI issue the primary object and put evidence next to the action."
+    },
+    {
+      "round": 2,
+      "phase": "convergent",
+      "created_at": "2026-06-11T00:00:00+00:00",
+      "prompt": "Turn the selected review queue into an implementation-ready screen with a build brief panel.",
+      "images": [
+        "../../assets/examples/design-review-inbox/after-review-queue.svg"
+      ],
+      "liked": [
+        "one selected issue",
+        "clear risk and evidence",
+        "ready for dev handoff"
+      ],
+      "patterns": [
+        "queue plus detail rail",
+        "acceptance checks",
+        "state chips"
+      ],
+      "failure_signals": [],
+      "avoid_added": [],
+      "decision": "Use this as the README proof example.",
+      "next_prompt_change": ""
+    }
+  ],
+  "selected_direction": {
+    "name": "Review Queue to Build Brief",
+    "primary_object": "UI review issue",
+    "primary_action": "Create build brief",
+    "why_it_won": [
+      "The object of work is visible.",
+      "Evidence is next to the decision.",
+      "The output is an implementation artifact, not generic advice."
+    ]
+  },
+  "avoid_list": [
+    "generic AI assistant as the whole product",
+    "metrics that do not change the next action",
+    "duplicate CTAs",
+    "feature soup",
+    "recommendations with no owner, state, or evidence"
+  ],
+  "artifacts": {
+    "before": "../../assets/examples/design-review-inbox/before-generic-ai-dashboard.svg",
+    "after": "../../assets/examples/design-review-inbox/after-review-queue.svg"
+  }
+}

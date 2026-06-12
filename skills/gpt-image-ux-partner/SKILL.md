@@ -7,7 +7,7 @@ description: "Use GPT image generation as a UI/UX brainstorming, critique, conve
 
 Use image generation as a design-thinking surface and inspiration channel, not as an automatic source of truth. The model can invent layouts, visualize feature ideas, compare interaction models, annotate problems, and synthesize directions quickly. Codex remains the product critic: inspect outputs, reject weak ideas, extract structure, and translate the selected concept into an implementable spec.
 
-## Operating Stance
+## Working Rules
 
 - Treat generated images as sketches from a fast visual collaborator.
 - Start by asking the user which collaboration cadence they want unless they already specified it: step-by-step feedback, autonomous sprint, or final implementation gate.
@@ -17,6 +17,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
 - Critique every output. Do not accept a pretty screen unless the workflow, hierarchy, and user job hold up.
 - Extract directionality, layout, interaction ideas, and visual signals from images; do not literally copy unrealistic generated features, fake content, or off-domain artifacts.
 - Keep round notes during ideation: liked ideas, useful design patterns, palette/type signals, layout moves, failure modes, realism risks, and decisions to keep or drop.
+- For multi-round work, save structured state with `scripts/round_state.py` when a repo or writable workspace is available.
 - Use early divergent rounds as diagnostic probes. Look for what can go wrong, what feels off-brand, what becomes unbuildable, what confuses the user job, and what the next prompt should avoid.
 - Maintain an evolving avoid-list and anti-pattern ledger. After each round, turn observed failures into sharper constraints for the next exploration.
 - Preserve prompts and selected image paths when outputs inform later implementation.
@@ -55,8 +56,16 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - **Convergent synthesis:** feed selected ingredients back into one cohesive feature or screen.
    - **Practical handoff:** derive states, components, data objects, responsive behavior, roles, accessibility risks, or test plans from a selected mockup.
 
-4. **Run three divergent rounds as exploration and failure scouting.**
-   Use image generation with structured prompts scaled to the scope. For each round, ask for a 2x2, 3x2, or 4x2 board, multi-screen set, or focused comparison board. Force each tile to vary by primary object, interaction style, or problem-solving strategy. Add anti-requirements such as "do not make four skins of the same dashboard." After each round, write notes on the ideas, patterns, palette, typography, layouts, and product loops worth carrying forward, plus what went wrong, what looked generic, what felt off-brand, what would be unbuildable, and what generated details to reject as unrealistic or off-brief. Use those failure notes to sharpen the next prompt.
+4. **Choose loop depth and diverge.**
+   Do not treat 3+3 as mandatory. Pick the smallest loop that can answer the design question:
+
+   - **Quick proof:** one divergent board, one critique/synthesis, one convergent screen or handoff.
+   - **Standard exploration:** two divergent rounds, synthesis, then one or two convergent refinements.
+   - **Deep exploration:** three divergent rounds, synthesis, then three convergent refinements.
+
+   Use deeper loops when product shape is unclear, multiple stakeholders need options, or the first boards expose serious failure modes. Use quick loops for narrow fixes, README examples, or when the user mainly needs a before/after proof.
+
+   Use image generation with structured prompts scaled to the scope. For each divergent round, ask for a 2x2, 3x2, or 4x2 board, multi-screen set, or focused comparison board. Force each tile to vary by primary object, interaction style, or problem-solving strategy. Add anti-requirements such as "do not make four skins of the same dashboard." After each round, write notes on the ideas, patterns, palette, typography, layouts, and product loops worth carrying forward, plus what went wrong, what looked generic, what felt off-brand, what would be unbuildable, and what generated details to reject as unrealistic or off-brief. Use those failure notes to sharpen the next prompt.
 
 5. **Inspect as a product designer.**
    Score the output on:
@@ -72,11 +81,11 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - Failure signal: what does this reveal that the product should avoid?
    - Prompt learning: what should change in the next prompt based on this result?
 
-6. **Synthesize after divergent round 3.**
+6. **Synthesize before convergence.**
    Review all round notes and produce one cohesive direction that is neat, on-brand, and buildable. Name the selected concept, the reasons it won, the interaction model, primary object, visual language, layout system, palette/type direction, core states, and the generated ideas being rejected. Include an explicit "avoid because" list so convergence is guided by both what worked and what failed.
 
-7. **Run three convergent rounds.**
-   Refine the synthesized direction through three single-screen or focused-flow generations. Each round should preserve the chosen product logic while improving hierarchy, layout, visual system, states, responsiveness, and realism. Pick one of these moves per iteration:
+7. **Run the convergent rounds.**
+   Refine the synthesized direction through the chosen loop depth. Each convergent round should preserve the chosen product logic while improving hierarchy, layout, visual system, states, responsiveness, and realism. Pick one of these moves per iteration:
 
    - Keep: preserve a promising direction and deepen it.
    - Reject: name why a direction fails and ask for alternatives.
@@ -86,7 +95,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - Translate: turn the chosen direction into an implementation brief.
 
 8. **Pick the best design and act on it.**
-   After convergent round 3, choose the strongest design objectively, explain why it wins, and do the next requested work from that direction: implementation, final mockup, handoff, or written product spec. Extract a written design brief before coding:
+   After convergence, choose the strongest design objectively, explain why it wins, and do the next requested work from that direction: implementation, final mockup, handoff, or written product spec. Extract a written design brief before coding:
 
    - chosen concept and why it won
    - audience and job
@@ -173,3 +182,4 @@ Output goal: <what Codex should learn from the image>
 - For iteration methods and critique heuristics, read [references/iteration-methods.md](references/iteration-methods.md).
 - For image-input loops that create implementation-useful artifacts, including selected-image asset extraction and on-brand asset packs, read [references/practical-image-loops.md](references/practical-image-loops.md).
 - For experiment-derived findings from the original design lab, read [references/experiment-findings.md](references/experiment-findings.md).
+- For structured run state, use `scripts/round_state.py` without loading it unless you need to patch it.

@@ -1,0 +1,74 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="900" fill="#F6F7F8"/>
+  <rect x="72" y="70" width="1296" height="760" rx="22" fill="white" stroke="#D9DEE7"/>
+  <text x="112" y="128" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">Before: generic AI dashboard</text>
+  <text x="112" y="164" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="18">Looks modern, but the user cannot tell what to review, why it matters, or what happens next.</text>
+
+  <rect x="112" y="210" width="470" height="470" rx="18" fill="#FBFCFD" stroke="#E2E8F0"/>
+  <text x="144" y="255" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">AI Assistant</text>
+  <rect x="144" y="286" width="386" height="94" rx="14" fill="#F3F4F6"/>
+  <text x="168" y="322" fill="#4B5563" font-family="Inter, Arial, sans-serif" font-size="18">"I can help improve the UI."</text>
+  <text x="168" y="352" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="15">No screenshot, priority, owner, or evidence.</text>
+  <rect x="144" y="410" width="386" height="64" rx="12" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="168" y="450" fill="#4338CA" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Generate recommendations</text>
+  <rect x="144" y="494" width="178" height="58" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="166" y="531" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">Analyze page</text>
+  <rect x="342" y="494" width="188" height="58" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="365" y="531" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">Create summary</text>
+  <rect x="144" y="584" width="386" height="54" rx="12" fill="#FFF7ED" stroke="#FED7AA"/>
+  <text x="168" y="619" fill="#9A3412" font-family="Inter, Arial, sans-serif" font-size="16">Suggestion quality: unknown</text>
+
+  <rect x="622" y="210" width="314" height="170" rx="18" fill="#FBFCFD" stroke="#E2E8F0"/>
+  <text x="654" y="254" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Engagement</text>
+  <text x="654" y="314" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="700">82%</text>
+  <text x="654" y="346" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="16">Not tied to a decision</text>
+
+  <rect x="966" y="210" width="314" height="170" rx="18" fill="#FBFCFD" stroke="#E2E8F0"/>
+  <text x="998" y="254" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Sessions</text>
+  <text x="998" y="314" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="700">14.2k</text>
+  <text x="998" y="346" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="16">No visible UI issue</text>
+
+  <rect x="622" y="416" width="314" height="264" rx="18" fill="#FBFCFD" stroke="#E2E8F0"/>
+  <text x="654" y="462" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Ideas</text>
+  <rect x="654" y="494" width="238" height="34" rx="8" fill="#F3F4F6"/>
+  <rect x="654" y="546" width="196" height="34" rx="8" fill="#F3F4F6"/>
+  <rect x="654" y="598" width="220" height="34" rx="8" fill="#F3F4F6"/>
+  <text x="654" y="654" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="16">Too vague to implement</text>
+
+  <rect x="966" y="416" width="314" height="264" rx="18" fill="#FBFCFD" stroke="#E2E8F0"/>
+  <text x="998" y="462" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Tasks</text>
+  <rect x="998" y="494" width="95" height="36" rx="18" fill="#EEF2FF"/>
+  <text x="1024" y="518" fill="#4338CA" font-family="Inter, Arial, sans-serif" font-size="15">Fix UI</text>
+  <rect x="1110" y="494" width="102" height="36" rx="18" fill="#EEF2FF"/>
+  <text x="1134" y="518" fill="#4338CA" font-family="Inter, Arial, sans-serif" font-size="15">Review</text>
+  <rect x="998" y="552" width="174" height="42" rx="12" fill="#111827"/>
+  <text x="1028" y="579" fill="white" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Start analysis</text>
+  <rect x="998" y="612" width="174" height="42" rx="12" fill="#111827"/>
+  <text x="1030" y="639" fill="white" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Start analysis</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <circle cx="575" cy="307" r="18" fill="#DC2626"/>
+    <text x="569" y="314" fill="white" font-size="18" font-weight="700">1</text>
+    <path d="M592 307 L690 307" stroke="#DC2626" stroke-width="3"/>
+    <rect x="690" y="280" width="210" height="54" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="710" y="313" fill="#991B1B" font-size="17" font-weight="700">metrics without action</text>
+
+    <circle cx="571" cy="442" r="18" fill="#DC2626"/>
+    <text x="565" y="449" fill="white" font-size="18" font-weight="700">2</text>
+    <path d="M552 442 L470 442" stroke="#DC2626" stroke-width="3"/>
+    <rect x="248" y="390" width="222" height="54" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="270" y="424" fill="#991B1B" font-size="17" font-weight="700">vague AI action</text>
+
+    <circle cx="1206" cy="594" r="18" fill="#DC2626"/>
+    <text x="1200" y="601" fill="white" font-size="18" font-weight="700">3</text>
+    <path d="M1186 594 L1110 594" stroke="#DC2626" stroke-width="3"/>
+    <rect x="1018" y="692" width="240" height="54" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="1040" y="726" fill="#991B1B" font-size="17" font-weight="700">duplicate CTAs</text>
+
+    <circle cx="938" cy="548" r="18" fill="#DC2626"/>
+    <text x="932" y="555" fill="white" font-size="18" font-weight="700">4</text>
+    <path d="M920 548 L824 548" stroke="#DC2626" stroke-width="3"/>
+    <rect x="656" y="706" width="240" height="54" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="678" y="740" fill="#991B1B" font-size="17" font-weight="700">no evidence chain</text>
+  </g>
+</svg>

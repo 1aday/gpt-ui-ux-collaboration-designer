@@ -2,9 +2,9 @@
 
 Image-model UX work is strongest when Codex runs a loop: prompt, inspect, critique, reprompt, extract. Do not stop after the first attractive image.
 
-## Default Six-Round Diverge Then Converge Loop
+## Adaptive Diverge Then Converge Loop
 
-Use this as the default when the user asks for UI/UX brainstorming and has not requested a shorter path.
+Use the smallest loop that can answer the design question. The 3+3 structure is deep mode, not the default for every task.
 
 ### Before Round 1
 
@@ -25,7 +25,17 @@ Set scope explicitly before prompting:
 - **Specific feature:** explore the feature surface, controls, states, evidence, entry point, exit point, and fit with the larger product.
 - **Narrow design problem:** explore competing ways to solve one friction point, hierarchy issue, action flow, or responsive constraint.
 
-### Divergent Rounds 1-3
+### Choose Loop Depth
+
+- **Quick proof:** one divergent board, one critique/synthesis, one convergent screen or handoff.
+- **Standard exploration:** two divergent rounds, synthesis, then one or two convergent refinements.
+- **Deep exploration:** three divergent rounds, synthesis, then three convergent refinements.
+
+Choose quick proof for narrow before/after examples, README proof, isolated feature fixes, or when the user wants speed. Choose standard exploration for most feature and screen work. Choose deep exploration for whole-product concepts, ambiguous product strategy, visual system exploration, or when early boards reveal major failure modes.
+
+Record the selected loop depth and the reason in round notes or `scripts/round_state.py`.
+
+### Divergent Rounds
 
 1. Generate a broad concept board, screen set, or focused comparison board that matches the scope.
 2. Name the interaction model in each tile.
@@ -37,7 +47,9 @@ Set scope explicitly before prompting:
 Round notes format:
 
 ```text
-Round [1/2/3] notes
+Round [number] notes
+Loop depth:
+Why this depth:
 Liked ideas:
 Useful design patterns:
 Palette/type signals:
@@ -55,7 +67,7 @@ Prompt changes for next round:
 
 Collect ideas, design patterns, color palette signals, typography mood, layout moves, interaction models, and product loops that are worth carrying forward. Also use the early rounds to discover the bad shape of the problem: unrealistic content, fake features, generated text, irrelevant domain details, over-polished decoration, weak hierarchy, generic SaaS tropes, off-brand visual moves, or anything that would steer implementation in the wrong direction. Convert those findings into the next prompt's constraints and avoid-list.
 
-### Synthesis After Round 3
+### Synthesis Before Convergence
 
 Review all divergent notes and produce one cohesive direction before convergent prompting:
 
@@ -70,14 +82,14 @@ Review all divergent notes and produce one cohesive direction before convergent 
 - anti-patterns discovered during divergent rounds and why they are rejected
 - states, components, and data objects needed for implementation
 
-### Convergent Rounds 4-6
+### Convergent Rounds
 
 1. Generate one deeper site/app mockup, screen set, feature screen, or focused problem-solution flow from the synthesized direction.
 2. Critique it objectively.
 3. Preserve only the parts that support the job, product logic, hierarchy, and brand.
 4. Tighten the next prompt using the critique.
-5. Repeat for three convergent rounds.
-6. After round 6, pick the strongest design and proceed with the requested deliverable.
+5. Repeat only as many times as the chosen loop depth requires.
+6. After convergence, pick the strongest design and proceed with the requested deliverable.
 
 If the user is likely to build it, run one practical handoff loop after selecting the design: state coverage, component map, responsive adaptation, accessibility audit, or data/event model.
 

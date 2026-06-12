@@ -6,6 +6,31 @@ It turns GPT image generation into a practical UI/UX collaborator: divergent des
 
 ![GPT UI/UX Collaboration Designer featured image](assets/gpt-ui-ux-collaboration-designer-featured.png)
 
+## Simple Proof
+
+Example scenario: improve a product team's UI review workflow so vague AI suggestions become implementation-ready handoffs.
+
+| Before: generic AI dashboard | After: review queue to build brief |
+| --- | --- |
+| ![Before: generic AI dashboard](assets/examples/design-review-inbox/before-generic-ai-dashboard.svg) | ![After: review queue to build brief](assets/examples/design-review-inbox/after-review-queue.svg) |
+
+What changed: the center of the product moved from a vague assistant panel to a concrete issue queue. Evidence sits beside the decision, there is one primary action, and the output is a build brief a frontend agent can implement.
+
+Full example: [`examples/design-review-inbox`](examples/design-review-inbox)
+
+## Save Run State
+
+For real multi-round work, the skill can save prompts, image paths, notes, selected direction, and avoid-list as JSON:
+
+```bash
+skills/gpt-image-ux-partner/scripts/round_state.py init \
+  --file .codex/ux-run.json \
+  --project "Design Review Inbox" \
+  --cadence final_implementation_gate \
+  --scope specific_feature_ux \
+  --loop-depth quick
+```
+
 ## Install With Codex
 
 In Codex, point at this repo and say:
@@ -60,12 +85,13 @@ Use $gpt-image-ux-partner to turn the selected mockup into an asset plan: direct
 
 - Sets scope first: whole app/site, multi-screen product concept, specific feature, or narrow design problem.
 - Starts by asking for collaboration cadence: step-by-step feedback, autonomous sprint, or final implementation gate.
-- Runs three divergent rounds, using each round for design inspiration and failure scouting.
+- Uses adaptive loop depth: quick proof, standard exploration, or deeper 3+3 pass.
 - Keeps round notes: liked ideas, useful patterns, palette/type signals, layout moves, failure signals, and next prompt changes.
 - Synthesizes one cohesive direction before convergence.
-- Runs three convergent rounds to refine hierarchy, states, responsiveness, realism, and product logic.
+- Refines hierarchy, states, responsiveness, realism, and product logic before handoff.
 - Treats image output as directional inspiration, not literal implementation truth.
 - Converts the selected direction into build briefs, component maps, responsive notes, or asset plans.
+- Includes a structured-state helper for saving prompts, image paths, notes, decisions, and avoid-lists.
 
 ## How It Works
 
@@ -78,11 +104,11 @@ flowchart LR
   C --> F[Frame scope and constraints]
   D --> F
   E --> F
-  F --> G[3 divergent rounds]
-  G --> H[Failure scouting and avoid-list]
-  H --> I[Synthesize one direction]
-  I --> J[3 convergent rounds]
-  J --> K[Chosen design brief]
+  F --> G[Choose loop depth]
+  G --> H[Diverge: compare interaction models]
+  H --> I[Failure scouting and avoid-list]
+  I --> J[Synthesize one direction]
+  J --> K[Converge and refine]
   K --> L{Ready to build?}
   L --> M[Implementation plan]
   L --> N[Asset plan]
@@ -94,10 +120,14 @@ flowchart LR
 ```text
 assets/
   gpt-ui-ux-collaboration-designer-featured.png
+  examples/
+examples/
+  design-review-inbox/
 skills/gpt-image-ux-partner/
   SKILL.md
   agents/openai.yaml
   references/
+  scripts/round_state.py
 scripts/install.sh
 ```
 
