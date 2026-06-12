@@ -99,25 +99,7 @@ Use $gpt-image-ux-partner to turn the selected mockup into an asset plan: direct
 
 ## How It Works
 
-```mermaid
-flowchart LR
-  A[User asks for UI/UX help] --> B{Collaboration cadence}
-  B --> C[Step-by-step feedback]
-  B --> D[Autonomous sprint]
-  B --> E[Final implementation gate]
-  C --> F[Frame scope and constraints]
-  D --> F
-  E --> F
-  F --> G[Choose loop depth]
-  G --> H[Diverge: compare interaction models]
-  H --> I[Failure scouting and avoid-list]
-  I --> J[Synthesize one direction]
-  J --> K[Converge and refine]
-  K --> L{Ready to build?}
-  L --> M[Implementation plan]
-  L --> N[Asset plan]
-  L --> O[Component and state map]
-```
+Frame the problem, generate different interaction models, mark what works and fails, converge on one direction, then hand off a build brief.
 
 ## Repository Layout
 
