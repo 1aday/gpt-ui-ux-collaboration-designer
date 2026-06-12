@@ -10,6 +10,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
 ## Operating Stance
 
 - Treat generated images as sketches from a fast visual collaborator.
+- Start by asking the user which collaboration cadence they want unless they already specified it: step-by-step feedback, autonomous sprint, or final implementation gate.
 - Set the scope first: whole site/app, multi-screen product concept, specific feature, or narrow design problem.
 - Ask for interaction models, objects, loops, and constraints before asking for style.
 - Prefer contact sheets for divergence and single-screen mockups for convergence.
@@ -26,10 +27,19 @@ Use image generation as a design-thinking surface and inspiration channel, not a
 
 ## Workflow
 
-1. **Frame the design problem.**
+1. **Choose the collaboration cadence.**
+   Before framing or generating, ask the user how they want to collaborate unless they already made it clear:
+
+   - **Step-by-step feedback:** pause after each divergent round, synthesis, and convergent round so the user can react, redirect, or choose.
+   - **Autonomous sprint:** Codex keeps going, decides between rounds, updates the avoid-list and synthesis itself, and asks only when blocked or when a decision would be risky.
+   - **Final implementation gate:** Codex runs the ideation and convergence loop autonomously, then asks once before implementation, asset production, or code changes.
+
+   Treat the answer as the default cadence for the session. In autonomous modes, keep concise notes so the user can audit the decisions later. In final-gate mode, do not implement until the user approves the chosen direction.
+
+2. **Frame the design problem.**
    Capture the scope, audience, job, primary object, decision/action, device or viewport, business goal, constraints, and avoid-list. If any of these aspects are unknown or unclear, ask the user before generating. Keep questions short and only ask for what is needed to avoid designing the wrong product.
 
-2. **Choose the exploration mode.**
+3. **Choose the exploration mode.**
    Use the mode that matches the design question:
 
    - **Divergent concepts:** ask for 4-8 different interaction models, not visual skins.
@@ -45,10 +55,10 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - **Convergent synthesis:** feed selected ingredients back into one cohesive feature or screen.
    - **Practical handoff:** derive states, components, data objects, responsive behavior, roles, accessibility risks, or test plans from a selected mockup.
 
-3. **Run three divergent rounds as exploration and failure scouting.**
+4. **Run three divergent rounds as exploration and failure scouting.**
    Use image generation with structured prompts scaled to the scope. For each round, ask for a 2x2, 3x2, or 4x2 board, multi-screen set, or focused comparison board. Force each tile to vary by primary object, interaction style, or problem-solving strategy. Add anti-requirements such as "do not make four skins of the same dashboard." After each round, write notes on the ideas, patterns, palette, typography, layouts, and product loops worth carrying forward, plus what went wrong, what looked generic, what felt off-brand, what would be unbuildable, and what generated details to reject as unrealistic or off-brief. Use those failure notes to sharpen the next prompt.
 
-4. **Inspect as a product designer.**
+5. **Inspect as a product designer.**
    Score the output on:
 
    - Job fit: does it help the intended user make progress?
@@ -62,10 +72,10 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - Failure signal: what does this reveal that the product should avoid?
    - Prompt learning: what should change in the next prompt based on this result?
 
-5. **Synthesize after divergent round 3.**
+6. **Synthesize after divergent round 3.**
    Review all round notes and produce one cohesive direction that is neat, on-brand, and buildable. Name the selected concept, the reasons it won, the interaction model, primary object, visual language, layout system, palette/type direction, core states, and the generated ideas being rejected. Include an explicit "avoid because" list so convergence is guided by both what worked and what failed.
 
-6. **Run three convergent rounds.**
+7. **Run three convergent rounds.**
    Refine the synthesized direction through three single-screen or focused-flow generations. Each round should preserve the chosen product logic while improving hierarchy, layout, visual system, states, responsiveness, and realism. Pick one of these moves per iteration:
 
    - Keep: preserve a promising direction and deepen it.
@@ -75,7 +85,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - Redline: ask for annotated critique on the image or a recreated flawed screen.
    - Translate: turn the chosen direction into an implementation brief.
 
-7. **Pick the best design and act on it.**
+8. **Pick the best design and act on it.**
    After convergent round 3, choose the strongest design objectively, explain why it wins, and do the next requested work from that direction: implementation, final mockup, handoff, or written product spec. Extract a written design brief before coding:
 
    - chosen concept and why it won
@@ -88,7 +98,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - visual system notes
    - explicit non-goals and rejected ideas
 
-8. **Convert the chosen design into usable assets when needed.**
+9. **Convert the chosen design into usable assets when needed.**
    If the next step is implementation, brand exploration, or production design, use the selected image or user-provided image as the aesthetic guide. First write an asset brief before generating or cropping:
 
    - source image path and why it was chosen
@@ -97,13 +107,13 @@ Use image generation as a design-thinking surface and inspiration channel, not a
    - required production specs: file type, aspect ratio, target size, transparent background, light/dark variants, states, responsive variants, and accessibility constraints
    - prompts and negative prompts for missing on-brand assets
 
-9. **Isolate what can be reused directly.**
+10. **Isolate what can be reused directly.**
    For assets visible in the chosen image, crop or isolate only if the asset is actually useful in production: logo marks owned by the user, icons, product illustrations, textures, backgrounds, avatars, empty-state art, or hero/media treatments. Prefer clean transparent-background assets when possible. If the source is a generated mockup, treat isolation as a draft and be ready to redraw or recreate the asset cleanly.
 
-10. **Generate the missing on-brand assets.**
+11. **Generate the missing on-brand assets.**
    Use the chosen image as the brand and aesthetic reference, then prompt for only the missing pieces. Keep prompts specific about role, dimensions, background, style invariants, and what must not drift. Generate assets as sets when consistency matters: icon family, empty states, avatar set, product illustration set, texture pack, hero image, card thumbnails, state badges, or onboarding visuals.
 
-11. **Package the asset handoff.**
+12. **Package the asset handoff.**
    Before coding, create a small implementation handoff: asset manifest, filenames, intended component/use, dimensions, variants, source prompt/reference image, and any verification notes. Keep the asset set lean; do not generate decorative filler just because the source image looks good.
 
 ## Prompt Skeleton

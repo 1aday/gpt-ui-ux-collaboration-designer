@@ -8,6 +8,14 @@ Use this as the default when the user asks for UI/UX brainstorming and has not r
 
 ### Before Round 1
 
+Ask the user to choose a collaboration cadence unless they already specified it:
+
+- **Step-by-step feedback:** pause after each divergent round, synthesis, and convergent round for user input.
+- **Autonomous sprint:** keep going, decide between rounds, and ask only when blocked or when a risky assumption would steer the project.
+- **Final implementation gate:** run the ideation and convergence loop autonomously, then ask once before implementation, asset production, or code changes.
+
+Use that cadence for the rest of the loop. If the user chooses final implementation gate, do not implement until they approve the selected direction.
+
 Ask the user for any missing or unclear framing details from the core frame: scope, audience, user job, primary object, decision/action, device or viewport, business goal, constraints, and avoid-list. Do not invent these silently when they materially affect the design direction.
 
 Set scope explicitly before prompting:

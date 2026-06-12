@@ -43,7 +43,7 @@ Use $gpt-image-ux-partner to explore UI/UX directions for this app before coding
 Useful prompts:
 
 ```text
-Use $gpt-image-ux-partner to run a scope-calibrated UI/UX ideation loop for a mobile feature. Ask me for missing scope, audience, viewport, or constraints before generating.
+Use $gpt-image-ux-partner to run a scope-calibrated UI/UX ideation loop for a mobile feature. First ask whether I want step-by-step feedback, an autonomous sprint, or only a final gate before implementation.
 ```
 
 ```text
@@ -57,6 +57,7 @@ Use $gpt-image-ux-partner to turn the selected mockup into an asset plan: direct
 ## What The Skill Does
 
 - Sets scope first: whole app/site, multi-screen product concept, specific feature, or narrow design problem.
+- Starts by asking for collaboration cadence: step-by-step feedback, autonomous sprint, or final implementation gate.
 - Runs three divergent rounds, using each round for design inspiration and failure scouting.
 - Keeps round notes: liked ideas, useful patterns, palette/type signals, layout moves, failure signals, and next prompt changes.
 - Synthesizes one cohesive direction before convergence.
@@ -88,4 +89,3 @@ The expected result is:
 ```text
 Skill is valid!
 ```
-
