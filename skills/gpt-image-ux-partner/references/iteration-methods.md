@@ -33,7 +33,7 @@ Set scope explicitly before prompting:
 
 Choose quick proof for narrow before/after examples, README proof, isolated feature fixes, or when the user wants speed. Choose standard exploration for most feature and screen work. Choose deep exploration for whole-product concepts, ambiguous product strategy, visual system exploration, or when early boards reveal major failure modes.
 
-Record the selected loop depth and the reason in round notes or `scripts/round_state.py`.
+Record the selected loop depth and the reason in round notes or `python3 scripts/round_state.py`.
 
 ### Divergent Rounds
 

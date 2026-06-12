@@ -17,7 +17,7 @@ Use image generation as a design-thinking surface and inspiration channel, not a
 - Critique every output. Do not accept a pretty screen unless the workflow, hierarchy, and user job hold up.
 - Extract directionality, layout, interaction ideas, and visual signals from images; do not literally copy unrealistic generated features, fake content, or off-domain artifacts.
 - Keep round notes during ideation: liked ideas, useful design patterns, palette/type signals, layout moves, failure modes, realism risks, and decisions to keep or drop.
-- For multi-round work, save structured state with `scripts/round_state.py` when a repo or writable workspace is available.
+- For multi-round work, save structured state with `python3 scripts/round_state.py` when a repo or writable workspace is available.
 - Use early divergent rounds as diagnostic probes. Look for what can go wrong, what feels off-brand, what becomes unbuildable, what confuses the user job, and what the next prompt should avoid.
 - Maintain an evolving avoid-list and anti-pattern ledger. After each round, turn observed failures into sharper constraints for the next exploration.
 - Preserve prompts and selected image paths when outputs inform later implementation.
@@ -182,4 +182,4 @@ Output goal: <what Codex should learn from the image>
 - For iteration methods and critique heuristics, read [references/iteration-methods.md](references/iteration-methods.md).
 - For image-input loops that create implementation-useful artifacts, including selected-image asset extraction and on-brand asset packs, read [references/practical-image-loops.md](references/practical-image-loops.md).
 - For experiment-derived findings from the original design lab, read [references/experiment-findings.md](references/experiment-findings.md).
-- For structured run state, use `scripts/round_state.py` without loading it unless you need to patch it.
+- For structured run state, use `python3 scripts/round_state.py` without loading it unless you need to patch it.

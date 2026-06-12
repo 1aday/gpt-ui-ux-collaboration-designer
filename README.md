@@ -23,7 +23,7 @@ Full example: [`examples/design-review-inbox`](examples/design-review-inbox)
 For real multi-round work, the skill can save prompts, image paths, notes, selected direction, and avoid-list as JSON:
 
 ```bash
-skills/gpt-image-ux-partner/scripts/round_state.py init \
+python3 skills/gpt-image-ux-partner/scripts/round_state.py init \
   --file .codex/ux-run.json \
   --project "Design Review Inbox" \
   --cadence final_implementation_gate \
